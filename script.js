@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const feedbackDiv = document.getElementById("form-feedback");
 
   //   add a submit listener to the form
-  form.addEventListener("submit", (event) => {
+  function handleFormSubmission(event) {
     // prevent form from submitting to server
     event.preventDefault();
 
@@ -39,5 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       feedbackDiv.style.color = "#dc3545";
     }
-  });
+  }
+  form.addEventListener("submit", handleFormSubmission);
 });
